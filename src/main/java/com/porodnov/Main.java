@@ -9,7 +9,7 @@ public class Main {
         ExcelService file = new ExcelService();
 
         //file.creating();
-        file.readExcelFile();
 
+        file.readExcelFile();
     }
 }

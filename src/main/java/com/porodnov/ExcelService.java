@@ -1,8 +1,8 @@
 package com.porodnov;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.util.CellReference;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,13 +11,10 @@ import java.io.IOException;
 
 public class ExcelService {
 
-
     public void creating() throws IOException {
 
         Workbook wb = new HSSFWorkbook();
         Sheet sheet0 = wb.createSheet("1 List");
-        Sheet sheet1 = wb.createSheet("2 List");
-        Sheet sheet2 = wb.createSheet("3 List");
 
         FileOutputStream file = new FileOutputStream("E:/JavaProjects/ProjectExcel/result.xls");
 
@@ -34,6 +31,7 @@ public class ExcelService {
 
         System.out.println(resultRead);
         wb.close();
+
     }
 
 }
